@@ -50,6 +50,25 @@ router.post("/insertinto", (request, response) => {
   }
 });
 
+//create a table in Database
+router.post("/create", (request, response) => {
+  const { tableName, name, owner, sex } = request.body;
+  db.query(
+    `CREATE TABLE ${tableName} (${name} VARCHAR(20), ${owner} VARCHAR(20), ${sex} VARCHAR(10))`,
+    (err, result) => {
+      if (err) {
+        response.status(401).send({
+          success: false,
+          data: err,
+        });
+      }
+      response.status(201).send({
+        success: true,
+        data: result,
+      });
+    }
+  );
+});
 //post into database
 //localhost:5000/post
 router.post("/data/payload", (request, response) => {

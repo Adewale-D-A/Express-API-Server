@@ -14,22 +14,31 @@ This is a personal Node Js API project using Express Js and AWS resources(mysql,
 
 `INSERT INTO userinfo VALUES ("${firstname}", '${lastname}', '${id}')`
 
+`'SELECT * FROM table WHERE id=? LIMIT ?, 5',[ user_id, start ]`
+
+`'SELECT * FROM 'table' WHERE 'name' = "Page" AND 'age' > 45'`
+
 # Basic mysql database CLI commands
+
+`CREATE DATABASE sampleDB;`
 
 `SHOW databases;`
 
 `USE database1.1.0;`
 
+`CREATE TABLE usersinfo (username VARCHAR(255), password VARCHAR(255), id (INT), date DATE);`
+
 `SHOW TABLES;`
-
-`CREATE DATABASE sampleDB;`
-
-`CREATE TABLE usersinfo (username VARCHAR(255), password VARCHAR(255), id (INT));`
 
 `DESCRIBE userinfo;`
 
-`SELECT * FROM database1.1.0.userinfo;`
+`SELECT * FROM userinfo WHERE id > 5`
 
-`INSERT INTO database1.1.0.userinfo ('firstname', 'lastname', 'id') VALUES ('ade', 'az', '1');`
+`INSERT INTO userinfo ('firstname', 'lastname', 'id') VALUES ('ade', 'az', '1');`
 
-`DELETE FROM database1.1.0.userinfo WHERE ('id' = '2');`
+`DELETE FROM userinfo WHERE ('id' = '2' AND name="shola");`
+
+`UPDATE userinfo SET birth = '1989-08-31' WHERE name = 'Bowser';`
+
+**_mysql_ formatS**
+_Date format:_ `YYYY-MM-DD`
