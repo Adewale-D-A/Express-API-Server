@@ -34,11 +34,12 @@ This is a personal Node Js API project using Express Js and AWS resources(mysql,
 
 `SELECT * FROM userinfo WHERE id > 5`
 
-`INSERT INTO userinfo ('firstname', 'lastname', 'id') VALUES ('ade', 'az', '1');`
+`INSERT INTO userinfo (firstname, lastname, id) VALUES ('ade', 'az', '1');`
 
 `DELETE FROM userinfo WHERE ('id' = '2' AND name="shola");`
 
 `UPDATE userinfo SET birth = '1989-08-31' WHERE name = 'Bowser';`
 
+`create table user_registration (timestamp timestamp DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP);`
 **_mysql_ formatS**
 _Date format:_ `YYYY-MM-DD`
