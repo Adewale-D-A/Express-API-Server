@@ -41,5 +41,12 @@ This is a personal Node Js API project using Express Js and AWS resources(mysql,
 `UPDATE userinfo SET birth = '1989-08-31' WHERE name = 'Bowser';`
 
 `create table user_registration (timestamp timestamp DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP);`
+
+`ALTER TABLE user_registration CHANGE COLUMN 'timestamp' 'timestamp' TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP;`
+
 **_mysql_ formatS**
 _Date format:_ `YYYY-MM-DD`
+
+> SELECT \* FROM `db_server`.`user_registration`
+
+> INSERT INTO \`db_server\`.\`user_registration\` (\`firstname\`, \`lastname\`, \`email\`,\`password\`, \`username\`) VALUES ('jack', 'Dorse', 'jack@io.com', 'hashed', 'jackie')
